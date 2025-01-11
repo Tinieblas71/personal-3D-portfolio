@@ -2,11 +2,12 @@ import { motion, useTime } from "framer-motion";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { favicon } from "../assets"
 
 const Hero = () => {
 
   const [ text ] = useTypewriter({
-    words: ['Jr Software Dev.','Machine Learning Trainee.', 'Estudiante Autodidacta.', 'Freelancer.', 'Web Full-Stack Dev.'],
+    words: ['Jr Software Dev.' ,'Estudiante Autodidacta.', 'Freelancer.', 'Estudiante de IA.','Web Full-Stack Dev.'],
     loop: {},
   });
 
@@ -15,7 +16,7 @@ const Hero = () => {
     <section className={`relative w-full h-screen mx-auto`}>
       <div
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-col items-center gap-5`}
-      >
+        >
         <div className="">
           <h1 className={`${styles.heroHeadText}`}>
             Hola, Soy <span className='text-[#82ecff]'>Santi M.</span>
@@ -24,6 +25,7 @@ const Hero = () => {
            <span className='text-[#82ecff]'> Soy </span> <i>{text}</i><Cursor/> <br className='sm:block hidden' />
           </p>
         </div>
+        <img src={favicon} alt="Santis Logo" width={400} height={400} className="mt-8"/>
       </div>
 
       {/*<ComputersCanvas /> */}
