@@ -89,33 +89,13 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
     name: "git",
     icon: git,
   },
   {
     name: "java",
     icon: java,
-  },
-  {
-    name: "mysql",
-    icon: mysql,
-  },
-  {
-    name: "typescript",
-    icon: typescript,
-  },
-  {
-    name: "redux",
-    icon: redux,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
+  }
 ];
 
 const experiences = [

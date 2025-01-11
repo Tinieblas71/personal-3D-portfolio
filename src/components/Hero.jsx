@@ -6,7 +6,7 @@ import { ComputersCanvas } from "./canvas";
 const Hero = () => {
 
   const [ text ] = useTypewriter({
-    words: ['Desarrollador de Software Jr.','Aprendiz de Machine Learning.', 'Estudiante Autodidacta.', 'Freelancer.', 'Desarrollador Web Full Stack Jr.', 'Desarrollador de Aplicaciones Móviles.'],
+    words: ['Jr Software Dev.','Machine Learning Trainee.', 'Estudiante Autodidacta.', 'Freelancer.', 'Web Full-Stack Dev.'],
     loop: {},
   });
 
@@ -14,14 +14,14 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-col items-center gap-5`}
       >
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white  `}>
+        <div className="">
+          <h1 className={`${styles.heroHeadText}`}>
             Hola, Soy <span className='text-[#82ecff]'>Santi M.</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-           <span className='text-[#82ecff]'> Soy </span> <i>{text}</i> <Cursor/> <br className='sm:block hidden' />
+           <span className='text-[#82ecff]'> Soy </span> <i>{text}</i><Cursor/> <br className='sm:block hidden' />
           </p>
         </div>
       </div>
