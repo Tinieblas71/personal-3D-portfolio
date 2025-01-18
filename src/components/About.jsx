@@ -47,21 +47,18 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          ¡Hola! Soy Santi M, un programador de 18 años apasionado por transformar ideas en soluciones digitales impactantes. Desde muy joven, descubrí mi interés por la tecnología y el diseño, lo que me llevó a especializarme en el desarrollo de software.
+          ¡Hola! Soy Santi M, un programador de 18 años apasionado por crear soluciones digitales impactantes. Desde joven, descubrí mi interés por la tecnología y el diseño, lo que me llevó a especializarme en el desarrollo de software.
+          <br />
+          Creo en el poder de la tecnología para innovar y generar impacto. Aspiro a crecer en áreas como la programación y la inteligencia artificial, contribuyendo a proyectos significativos que marquen una diferencia.
         </motion.p>
 
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-           Me dedico a crear herramientas modernas y funcionales que ayudan a negocios y emprendedores a destacar en el mundo digital. Mi meta es aprender constantemente y evolucionar, tanto profesional como personalmente.
-        </motion.p>
-
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        >
-          Creo en el poder de la tecnología para innovar, conectar y generar impacto. Aspiro a crecer en áreas como la programación, la inteligencia artificial y la tecnología, contribuyendo a proyectos que marquen la diferencia.
+          Mi objetivo es desarrollar herramientas modernas y funcionales que ayuden a negocios y emprendedores a destacar en el mundo digital.
+          <br />
+          Además, me esfuerzo por aprender constantemente y evolucionar tanto en lo profesional como en lo personal, siempre buscando nuevas formas de conectar con el futuro a través de la tecnología.
         </motion.p>
       </div>
 
