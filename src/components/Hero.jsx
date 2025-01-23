@@ -6,11 +6,11 @@ import { favicon } from "../assets";
 const Hero = () => {
   const [text] = useTypewriter({
     words: [
-      "Jr Software Dev.",
+      "Desarrollador de Software.",
       "Estudiante Autodidacta.",
       "Freelancer.",
       "Estudiante de IA.",
-      "Web Full-Stack Dev.",
+      "Desarrollador Web.",
     ],
     loop: {},
   });
@@ -20,7 +20,7 @@ const Hero = () => {
       <div
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-col items-center gap-5`}
       >
-        <div className="text-center sm:text-left">
+        <div className="text-center">
           {/* Encabezado */}
           <h1
             className={`${styles.heroHeadText} text-4xl md:text-5xl lg:text-6xl font-bold text-white`}
@@ -30,8 +30,8 @@ const Hero = () => {
 
           {/* Subtítulo con efecto de escritura */}
           <p className="mt-4 text-lg sm:text-xl lg:text-2xl text-white-100 leading-relaxed">
-            <span className="text-[#82ecff] font-medium">Soy </span>
-            <i className="font-light">{text}</i>
+            <span className="text-[#82ecff] font-semibold">Soy </span>
+            <b className="font-light">{text}</b>
             <Cursor className="text-[#82ecff]" />
           </p>
         </div>
