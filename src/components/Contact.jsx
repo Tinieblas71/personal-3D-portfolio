@@ -7,7 +7,7 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-import 'boxicons';
+import "boxicons";
 
 const Contact = () => {
   const formRef = useRef();
@@ -32,7 +32,7 @@ const Contact = () => {
   const handleSWhatsApp = () => {
     let url = `https://api.whatsapp.com/send?phone=5215612807356&text=Hola!%20Soy%3A%20${form.name}%0AMi%20mensaje%3A%20${form.message}%0AMi%20correo%3A%20${form.email}`;
     window.open(url);
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,8 +40,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_13528t1',
-        'template_wjc3646',
+        "service_13528t1",
+        "template_wjc3646",
         {
           from_name: form.name,
           to_name: "Santiago",
@@ -49,12 +49,14 @@ const Contact = () => {
           to_email: "2morenoestradasantiago@gmail.com",
           message: form.message,
         },
-        '2GVHHeDv3VAp0zFM3'
+        "2GVHHeDv3VAp0zFM3"
       )
       .then(
         () => {
           setLoading(false);
-          alert("¡Gracias! Te contactaré de vuelta tan pronto como sea posible.");
+          alert(
+            "¡Gracias! Te contactaré de vuelta tan pronto como sea posible."
+          );
 
           setForm({
             name: "",
@@ -73,11 +75,11 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`w-full xl:mt-12 flex flex-col-reverse gap-10 overflow-hidden`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Vamos a platicar</p>
         <h3 className={styles.sectionHeadText}>Contacto.</h3>
@@ -85,82 +87,92 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className="mt-12 flex flex-col gap-8"
         >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Su Nombre</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Su Nombre</span>
             <input
-              type='text'
-              name='name'
-              required='true'
+              type="text"
+              name="name"
+              required="true"
               value={form.name}
               onChange={handleChange}
               placeholder="Cuál es su nombre completo?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Su correo eléctronico</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">
+              Su correo eléctronico
+            </span>
             <input
-              type='email'
-              name='email'
-              required='true'
+              type="email"
+              name="email"
+              required="true"
               value={form.email}
               onChange={handleChange}
               placeholder="Cuál es su e.mail?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Su Mensaje</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Su Mensaje</span>
             <textarea
               rows={7}
-              name='message'
-              required='true'
+              name="message"
+              required="true"
               value={form.message}
               onChange={handleChange}
-              placeholder='Qué es lo quiere decirme?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder="Qué es lo quiere decirme?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
 
-          <div className="flex gap-4 mt-1">
+          <div className="w-full flex flex-col xs:flex-row flex-wrap items-center gap-4 mt-4">
+            {/* Texto "Por" */}
+            <span className="text-secondary xs:text-sm text-center xs:text-left">
+              <u>Por</u>
+            </span>
 
-          <span className="py-6 text-secondary"> <u>Por</u> </span>
+            {/* Botón de Correo */}
+            <button
+              type="submit"
+              className="flex items-center justify-center bg-tertiary rounded-xl w-full xs:w-auto px-6 py-3 text-white font-bold shadow-md shadow-primary hover:scale-105 hover:bg-blue-600 transition-transform duration-300"
+            >
+              <box-icon
+                name="envelope"
+                type="logo"
+                color="#ffffff"
+                size="md"
+              ></box-icon>
+            </button>
 
-          <button
-            type='submit'
-            className='bg-tertiary rounded-xl outline-none w-fit text-xs text-white font-bold shadow-md shadow-primary'
-          >
-            <div className='pt-2 px-8 w-full transition ease-in duration-300'>
-              <box-icon name='envelope' type='logo' color='#ffffff' size='md' ></box-icon>
-            </div>
-          </button>
+            {/* Texto "Ó" */}
+            <span className="text-secondary xs:text-sm text-center xs:text-left">
+              <u>Ó</u>
+            </span>
 
-          <span className="py-6 text-secondary"> <u>Ó </u> </span>
+            {/* Botón de WhatsApp */}
+            <a
+              className="flex items-center justify-center bg-tertiary rounded-xl w-full xs:w-auto px-6 py-3 text-white font-bold shadow-md shadow-primary hover:scale-105 hover:bg-green-500 transition-transform duration-300"
+              onClick={handleSWhatsApp}
+            >
+              <box-icon
+                name="whatsapp"
+                type="logo"
+                color="#ffffff"
+                size="md"
+              ></box-icon>
+            </a>
 
-          <a className='bg-tertiary rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:cursor-pointer transition ease-linear duration-300 hover:bg-green-500'
-          onClick={handleSWhatsApp}>
-            <div className='pt-4 px-8'>
-              <box-icon name='whatsapp' type='logo' color='#ffffff' size='md' ></box-icon>
-            </div>
-          </a>
-
-          <p className={`text-sm pt-7 px-8 text-green-500`}>
-            <i>
-              {loading ? "Enviando..." : ""}
-            </i>
-          </p>
-
+            {/* Estado de envío */}
+            {loading && (
+              <p className="text-sm text-green-500 text-center mt-2 xs:mt-0">
+                <i>Enviando...</i>
+              </p>
+            )}
           </div>
-
         </form>
-      </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
       </motion.div>
     </div>
   );
