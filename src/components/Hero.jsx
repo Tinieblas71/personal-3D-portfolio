@@ -8,9 +8,10 @@ const Hero = () => {
     words: [
       "Desarrollador de Software.",
       "Estudiante Autodidacta.",
-      "Freelancer.",
-      "Estudiante de IA.",
       "Desarrollador Web.",
+      "Estudiante de IA.",
+      "Freelancer",
+      "Diseñador.",
     ],
     loop: {},
   });
